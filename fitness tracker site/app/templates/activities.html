@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Fitness Tracker{% endblock %}
+{% block content %}
+<section style="text-align: center;">
+    <h2>Your Activities</h2>
+    <p>Track your daily activities and progress toward your fitness goals!</p>
+</section>
+
+<section style="text-align: center; margin-top: 30px;">
+    <div>
+        <input type="text" id="activityInput" placeholder="Add new activity">
+        <button id="addBtn">Add Activity</button>
+    </div>
+    <div style="margin-top: 10px;">
+        <label for="categorySelect">Choose Category:</label>
+        <select id="categorySelect">
+            <option value="running">Running</option>
+            <option value="yoga">Yoga</option>
+            <option value="gym">Gym</option>
+            <option value="swimming">Swimming</option>
+        </select>
+    </div>
+</section>
+
+<section style="text-align: center; margin-top: 30px;">
+    <h3>Recent Activities</h3>
+    <ul id="activityList" style="list-style: none; padding: 0;">
+        <!-- Dynamically added activities -->
+    </ul>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/activities.js') }}"></script>
+{% endblock %}

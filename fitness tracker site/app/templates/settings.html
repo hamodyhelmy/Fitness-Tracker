@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Fitness Tracker{% endblock %}
+{% block content %}
+<section style="text-align: center; margin-top: 20px;">
+    <h2>Settings</h2>
+</section>
+
+<!-- Display Settings -->
+<section style="text-align: center; margin: 30px auto; width: 80%; max-width: 600px; border: 1px solid #ccc; border-radius: 10px; padding: 20px; background-color: #f9f9f9;">
+    <h3>Display Settings</h3>
+    <button id="toggleTheme" style="padding: 10px 20px; font-size: 1rem;">Toggle Dark Mode</button>
+</section>
+
+<!-- Account Management -->
+<section style="text-align: center; margin: 30px auto; width: 80%; max-width: 600px; border: 1px solid #ccc; border-radius: 10px; padding: 20px; background-color: #f9f9f9;">
+    <h3>Account Management</h3>
+    <form id="updateAccountForm" style="text-align: left;" onsubmit="updateAccount(event)">
+        <label for="username" style="display: block; margin-bottom: 10px;">Update Username:</label>
+        <input type="text" id="username" placeholder="Enter new username" style="width: 100%; padding: 10px; margin-bottom: 20px;">
+
+        <label for="email" style="display: block; margin-bottom: 10px;">Update Email:</label>
+        <input type="email" id="email" placeholder="Enter new email" style="width: 100%; padding: 10px; margin-bottom: 20px;">
+
+        <label for="password" style="display: block; margin-bottom: 10px;">Update Password:</label>
+        <input type="password" id="password" placeholder="Enter new password" style="width: 100%; padding: 10px; margin-bottom: 20px;">
+
+        <button type="submit" style="padding: 10px 20px; font-size: 1rem;">Save Changes</button>
+    </form>
+</section>
+
+<!-- Privacy Options -->
+<section style="text-align: center; margin: 30px auto; width: 80%; max-width: 600px; border: 1px solid #ccc; border-radius: 10px; padding: 20px; background-color: #f9f9f9;">
+    <h3>Privacy Options</h3>
+    <ul style="list-style: none; padding: 0; text-align: left;">
+        <li style="margin-bottom: 10px;">
+            <button onclick="downloadUserData()" id="downloadData" style="padding: 10px 20px; font-size: 1rem; width: 100%;">Download User Data</button>        
+        </li>
+        <li>
+            <button onclick="deleteUserData()" id="deleteAccount" style="padding: 10px 20px; font-size: 1rem; width: 100%; background-color: #f44336; color: white; border: none;">Delete User Data</button>
+        </li>
+    </ul>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/settings.js') }}"></script>
+{% endblock %}

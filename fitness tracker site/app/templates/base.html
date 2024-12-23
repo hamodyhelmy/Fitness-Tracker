@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Fitness Tracker{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Fitness Tracker</div>
+        <ul>
+            <li><a href="{{ url_for('bp.home') }}">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Features</a>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('bp.progress') }}">Progress</a>
+                    <a href="{{ url_for('bp.goals') }}">Goals</a>
+                    <a href="{{ url_for('bp.activities_page') }}">Activities</a>
+                </div>
+            </li>
+            <li><a href="{{ url_for('bp.contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('bp.login') }}">Login</a></li>
+            <li><a href="{{ url_for('bp.signup') }}">Signup</a></li>  
+            <li><a href="{{ url_for('bp.settings') }}">Settings</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Fitness Tracker</p>
+    </footer>
+
+    <!-- Block for Page-Specific JS -->
+    {% block scripts %}{% endblock %}
+</body>
+</html>

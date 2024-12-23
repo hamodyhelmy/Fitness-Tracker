@@ -1,0 +1,871 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Font Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f5f7fa;
+    color: #333;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1c1e;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 12px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Dropdown button */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #1c1c1e;
+    color: white;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #007bff;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:  #1c1c1e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown content when hovering over the dropdown */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #007bff, #0056b3);
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background: #fff;
+    color: #007bff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero button:hover {
+    background: #0056b3;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    background: #fff;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    text-align: center;
+    width: 300px;
+    margin: 20px;
+}
+
+.feature img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover img {
+    transform: scale(1.05);
+}
+
+.feature h3 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 50px 20px;
+    background: #f9fafb;
+}
+
+.benefits h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.benefits ul {
+    list-style: none;
+    max-width: 600px;
+    margin: auto;
+    padding: 0;
+}
+
+.benefits ul li {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Call-to-Action Section */
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+    background: #007bff;
+    color: #fff;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.cta .btn {
+    background: #fff;
+    color: #007bff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cta .btn:hover {
+    background: #0056b3;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 50px 20px;
+    background: #f5f7fa;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    text-align: center;
+    width: 300px;
+    margin: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background: #1c1c1e;
+    color: #fff;
+    position: relative;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Authentication Section */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: #f5f7fa;
+    padding: 20px;
+}
+
+.form-container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.form-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.form-container input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-container input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-container button {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.form-container button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.form-container p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.form-container p a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-container p a:hover {
+    color: #0056b3;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* General Section Styling */
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+section h2, section h3 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Input and Button Styles */
+input[type="text"], input[type="date"], textarea, select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 500px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Activities List */
+#activityList {
+    margin-top: 20px;
+}
+
+#activityList li {
+    background: #f9f9f9;
+    margin: 10px auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 500px;
+    font-size: 1rem;
+    color: #333;
+    transition: transform 0.2s ease;
+}
+
+#activityList li:hover {
+    transform: translateY(-5px);
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 80%;
+    max-width: 500px;
+    height: 20px;
+    background: #f3f3f3;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    background: #4caf50;
+    width: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Motivational Message */
+#motivationalMessage p {
+    animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Images */
+section img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 1s ease-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* General Section Styling */
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+section h2, section h3 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+section p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Dropdown Menu */
+select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 1rem;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Chart.js Canvas Styling */
+canvas {
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Forms and Input Fields */
+form {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: left;
+}
+
+form label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: block;
+    color: #555;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Notification and Privacy Section Buttons */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button[style*="background-color: #f44336"] {
+    background-color: #f44336;
+}
+
+button[style*="background-color: #f44336"]:hover {
+    background-color: #d32f2f;
+}
+
+/* Dark Mode Toggle */
+#toggleTheme {
+    background-color: #f4f4f4;
+    color: #333;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+#toggleTheme:hover {
+    background-color: #ddd;
+}
+
+/* Progress Summary */
+#progressSummary {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+#progressSummary p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 10px;
+    }
+
+    table, form, canvas {
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+    }
+
+    form label {
+        font-size: 0.9rem;
+    }
+
+    form input, form button {
+        font-size: 0.9rem;
+    }
+}
+
+/* General Section Styling */
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+section h2, section h3 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+section p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Contact Form Styling */
+form {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    max-width: 600px;
+    text-align: left;
+}
+
+form label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Flash Messages */
+.success-message, .error-message {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.success-message {
+    background-color: #4caf50;
+    color: white;
+}
+
+.error-message {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Contact Information Styling */
+#contact-info {
+    margin: 30px auto;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+#contact-info p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+#contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media List */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+ul li a {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Map Section */
+iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 10px;
+    }
+
+    form, #contact-info, iframe {
+        width: 100%;
+    }
+
+    form label, form input, form button {
+        font-size: 0.9rem;
+    }
+
+    .success-message, .error-message {
+        font-size: 0.9rem;
+    }
+}

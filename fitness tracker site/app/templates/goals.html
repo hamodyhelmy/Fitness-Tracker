@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Fitness Tracker{% endblock %}
+{% block content %}
+<!-- Goal Setting Section -->
+<section style="text-align: center; margin-top: 30px;">
+    <h2>Set Your Fitness Goal</h2>
+    <p>Choose your fitness goal, set a target, and track your progress!</p>
+    
+    <!-- Goal Type Selection -->
+    <label for="goalType">Goal Type:</label>
+    <select id="goalType" aria-label="Select Goal Type">
+        <option value="weightLoss">Weight Loss</option>
+        <option value="strengthTraining">Strength Training</option>
+        <option value="runningDistance">Running Distance</option>
+        <option value="flexibility">Flexibility</option>
+    </select>
+
+    <!-- Goal Title and Description -->
+    <div style="margin-top: 20px;">
+        <label for="goalTitle">Goal Title:</label>
+        <input type="text" id="goalTitle" placeholder="E.g., Lose 10kg, Run 5k, etc." style="width: 80%; max-width: 500px;">
+        
+        <label for="goalDescription" style="margin-top: 10px;">Goal Description:</label>
+        <textarea id="goalDescription" rows="4" placeholder="Describe your goal in detail..." style="width: 80%; max-width: 500px;"></textarea>
+    </div>
+
+    <!-- Goal Deadline -->
+    <div style="margin-top: 20px;">
+        <label for="goalDeadline">Set Deadline:</label>
+        <input type="date" id="goalDeadline">
+    </div>
+
+    <!-- Save Goal Button -->
+    <div style="margin-top: 20px;">
+        <button id="saveGoalBtn">Save Goal</button>
+    </div>
+
+    <!-- User Goals List -->
+    <section style="text-align: center; margin-top: 40px;">
+        <h3>Your Saved Goals</h3>
+        <ul id="userGoalsList" style="list-style: none; padding: 0;">
+            <!-- Saved goals will appear here -->
+        </ul>
+    </section>
+
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/goals.js') }}"></script>
+{% endblock %}

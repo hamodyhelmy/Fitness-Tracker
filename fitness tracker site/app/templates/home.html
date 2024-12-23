@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block title %}Fitness Tracker{% endblock %}
+{% block content %}
+<!-- Hero Section -->
+<p class="greeting"></p> <!-- Add the greeting element -->
+<section class="hero">
+    <h1>Welcome to Fitness Tracker</h1>
+    <p>Track your fitness goals and progress efficiently!</p>
+    <button id="quoteBtn">Get a Motivational Quote</button>
+    <p id="quote"></p>
+</section>    
+
+<!-- Feature Section -->
+<section class="features">
+    <h2>Why Choose Fitness Tracker?</h2>
+    <div class="feature-container">
+        <div class="feature">
+            <img src="{{ url_for('static', filename='images/running.jpg') }}" alt="Track Running">
+            <h3>Track Your Activities</h3>
+            <p>Monitor your workouts, runs, and daily fitness routines with ease.</p>
+        </div>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='images/goals.jpg') }}" alt="Set Goals">
+            <h3>Set Fitness Goals</h3>
+            <p>Define your fitness objectives and watch your progress grow daily.</p>
+        </div>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='images/progress.jpg') }}" alt="Track Progress">
+            <h3>Track Your Progress</h3>
+            <p>Visualize your progress with charts and stats to stay motivated.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits">
+    <h2>Benefits of Using Fitness Tracker</h2>
+    <ul>
+        <li>✔ Stay organized with detailed activity logs.</li>
+        <li>✔ Reach your goals faster with tailored goal settings.</li>
+        <li>✔ Monitor progress through interactive charts and visuals.</li>
+        <li>✔ Enjoy a user-friendly and intuitive interface.</li>
+    </ul>
+</section>
+
+<!-- Call-to-Action Section -->
+<section class="cta">
+    <h2>Get Started Today!</h2>
+    <p>Take control of your fitness journey. Sign up and start tracking now!</p>
+    <a href="{{ url_for('bp.contact') }}" class="btn">Contact Us</a>
+</section>
+
+<!-- Testimonial Section -->
+<section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <img src="{{ url_for('static', filename='images/user1.jpg') }}" alt="Alex">
+            <p>"This app has changed my life! I finally stay on track with my workouts!"</p>
+            <span>- Alex, Fitness Enthusiast</span>
+        </div>
+        <div class="testimonial">
+            <img src="{{ url_for('static', filename='images/user2.jpg') }}" alt="Sarah">
+            <p>"Easy to use and very motivational. Highly recommend it!"</p>
+            <span>- Sarah, Marathon Runner</span>
+        </div>
+        <div class="testimonial">
+            <img src="{{ url_for('static', filename='images/user3.jpg') }}" alt="Michael">
+            <p>"A fantastic tool for setting goals and tracking progress efficiently."</p>
+            <span>- Michael, Gym Trainer</span>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}
+
+
+
